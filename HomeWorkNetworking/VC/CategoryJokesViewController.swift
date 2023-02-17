@@ -75,11 +75,12 @@ extension CategoryJokesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let category = categories[indexPath.row]
         
-        DetailJokeVC.shared.category = category
-        
         let story = UIStoryboard(name: "Main", bundle: nil)
         let vc = story.instantiateViewController(withIdentifier: "DetailJokeVC") as! DetailJokeVC
         vc.generateNewJokeButtonIsHidden = false
+        vc.category = category
+        
+        navigationController?.pushViewController(vc, animated: false)
     }
 }
 

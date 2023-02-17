@@ -15,6 +15,7 @@ class DetailJokeVC: UIViewController {
         didSet{
             let imageName = jokeIsSaved ? "star.fill" : "star"
             imageStar = UIImage(systemName: imageName)
+            navigationItem.rightBarButtonItem?.image = imageStar
         }
     }
     
@@ -35,7 +36,14 @@ class DetailJokeVC: UIViewController {
                                                             style: .done,
                                                             target: self,
                                                             action: #selector(addJokeInFavorite))
-        fetchCategoryJoke()
+        
+        if let category = category {
+            fetchCategoryJoke()
+        } else {
+            setUI()
+        }
+        
+    
         checkIfJokeIsSaved()
         showGenerateNewJokeButton()
     }
@@ -59,7 +67,7 @@ class DetailJokeVC: UIViewController {
             UserDefaultManager.shared.saveDataJoke(data: jokeData)
         }
         jokeIsSaved.toggle()
-        navigationItem.rightBarButtonItem?.image = imageStar
+        
     }
     
     func checkIfJokeIsSaved() {
@@ -76,39 +84,34 @@ class DetailJokeVC: UIViewController {
     }
     
     func fetchCategoryJoke() {
-        if let category = DetailJokeVC.shared.category {
-            
+        guard let category = category else { return }
             Webservice().getJoke(category: category) { (result) in
                 switch result {
                 case .success(let jokes):
                     self.jokeData = jokes
                     DispatchQueue.main.async {
-                        self.jokeLabel.text = jokes.value
-                        if category != "random" {
-                            self.categoryLabel.text = "Category: \(category)"
-                        } else {
-                            self.fetchCategoriyFromData(data: self.jokeData)
-                        }
-                        
-                        self.dateCreationLabel.text = jokes.created_at
+                        self.setUI()
                     }
                 case .failure(let error):
                     debugPrint("Error \(error.localizedDescription)")
                 }
             }
-        } else {
-            jokeLabel.text = jokeData.value
-            fetchCategoriyFromData(data: jokeData)
-            dateCreationLabel.text = "Created at: \(jokeData.created_at)"
         }
+    
+    func setUI() {
+        jokeLabel.text = jokeData.value
+        categoryLabel.text = fetchCategoriyFromData(data: jokeData)
+        dateCreationLabel.text = "Created at: \(jokeData.created_at)"
+        
+        checkIfJokeIsSaved()
     }
     
-    func fetchCategoriyFromData(data: DataJoke) {
+    func fetchCategoriyFromData(data: DataJoke) -> String {
         if data.categories.isEmpty {
-            categoryLabel.text = "Category: general"
+            return "Category: general"
         } else {
             let textLabel = data.categories.joined(separator: " , ")
-            categoryLabel.text = "Category: \(textLabel)"
+            return "Category: \(textLabel)"
         }
     }
 }
