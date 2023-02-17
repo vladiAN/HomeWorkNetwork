@@ -7,24 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C0002111298C01D10047137A /* RandomJokeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0002110298C01D10047137A /* RandomJokeVC.swift */; };
 		C0036610298A72260038D037 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C003660F298A72260038D037 /* AppDelegate.swift */; };
 		C0036612298A72260038D037 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0036611298A72260038D037 /* SceneDelegate.swift */; };
 		C0036617298A72260038D037 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0036615298A72260038D037 /* Main.storyboard */; };
 		C0036619298A72290038D037 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0036618298A72290038D037 /* Assets.xcassets */; };
 		C003661C298A72290038D037 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C003661A298A72290038D037 /* LaunchScreen.storyboard */; };
 		C00F0F8F2993DB3A0025191A /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00F0F8E2993DB3A0025191A /* FavoriteVC.swift */; };
-		C03E5214298C50910048D322 /* JokeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03E5213298C50910048D322 /* JokeVC.swift */; };
-		C0D032A2298A820500ABA64C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D032A1298A820500ABA64C /* MenuViewController.swift */; };
-		C0D1C437299443AD00AB693C /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D1C436299443AD00AB693C /* MenuTableViewCell.swift */; };
+		C03E5214298C50910048D322 /* DetailJokeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03E5213298C50910048D322 /* DetailJokeVC.swift */; };
+		C0D032A2298A820500ABA64C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D032A1298A820500ABA64C /* SearchViewController.swift */; };
 		C0DA2BBB298BD1310061E1B7 /* CategoryJokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DA2BBA298BD1300061E1B7 /* CategoryJokesViewController.swift */; };
 		C0E529C52992AA8B0007B888 /* NewTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E529C42992AA8B0007B888 /* NewTabBarController.swift */; };
-		C0E529C72993C2340007B888 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E529C62993C2340007B888 /* SavedViewController.swift */; };
 		C0EC3A47298C227D00DE57CF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EC3A46298C227D00DE57CF /* TableViewCell.swift */; };
+		C0F0E0EF2996BE5500ABBD71 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0E0EE2996BE5500ABBD71 /* WebServiceManager.swift */; };
+		C0F7E4AC299E4F2F009565EE /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F7E4AB299E4F2F009565EE /* UserDefaultManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C0002110298C01D10047137A /* RandomJokeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomJokeVC.swift; sourceTree = "<group>"; };
 		C003660C298A72260038D037 /* HomeWorkNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWorkNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C003660F298A72260038D037 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0036611298A72260038D037 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,13 +31,13 @@
 		C003661B298A72290038D037 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C003661D298A72290038D037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C00F0F8E2993DB3A0025191A /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
-		C03E5213298C50910048D322 /* JokeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeVC.swift; sourceTree = "<group>"; };
-		C0D032A1298A820500ABA64C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		C0D1C436299443AD00AB693C /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		C03E5213298C50910048D322 /* DetailJokeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailJokeVC.swift; sourceTree = "<group>"; };
+		C0D032A1298A820500ABA64C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C0DA2BBA298BD1300061E1B7 /* CategoryJokesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryJokesViewController.swift; sourceTree = "<group>"; };
 		C0E529C42992AA8B0007B888 /* NewTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTabBarController.swift; sourceTree = "<group>"; };
-		C0E529C62993C2340007B888 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		C0EC3A46298C227D00DE57CF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		C0F0E0EE2996BE5500ABBD71 /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
+		C0F7E4AB299E4F2F009565EE /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +72,10 @@
 			children = (
 				C003660F298A72260038D037 /* AppDelegate.swift */,
 				C0036611298A72260038D037 /* SceneDelegate.swift */,
-				C0E529C42992AA8B0007B888 /* NewTabBarController.swift */,
+				C042B69B299FB7CF00E59E56 /* Managers */,
 				C0E529C82993C2440007B888 /* VC */,
 				C0EC3A46298C227D00DE57CF /* TableViewCell.swift */,
-				C0D1C436299443AD00AB693C /* MenuTableViewCell.swift */,
+				C0E529C42992AA8B0007B888 /* NewTabBarController.swift */,
 				C0036615298A72260038D037 /* Main.storyboard */,
 				C0036618298A72290038D037 /* Assets.xcassets */,
 				C003661A298A72290038D037 /* LaunchScreen.storyboard */,
@@ -86,15 +84,22 @@
 			path = HomeWorkNetworking;
 			sourceTree = "<group>";
 		};
+		C042B69B299FB7CF00E59E56 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C0F7E4AB299E4F2F009565EE /* UserDefaultManager.swift */,
+				C0F0E0EE2996BE5500ABBD71 /* WebServiceManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		C0E529C82993C2440007B888 /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				C0D032A1298A820500ABA64C /* MenuViewController.swift */,
-				C0E529C62993C2340007B888 /* SavedViewController.swift */,
+				C0D032A1298A820500ABA64C /* SearchViewController.swift */,
 				C0DA2BBA298BD1300061E1B7 /* CategoryJokesViewController.swift */,
-				C03E5213298C50910048D322 /* JokeVC.swift */,
-				C0002110298C01D10047137A /* RandomJokeVC.swift */,
 				C00F0F8E2993DB3A0025191A /* FavoriteVC.swift */,
+				C03E5213298C50910048D322 /* DetailJokeVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -171,16 +176,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0DA2BBB298BD1310061E1B7 /* CategoryJokesViewController.swift in Sources */,
-				C0E529C72993C2340007B888 /* SavedViewController.swift in Sources */,
-				C0002111298C01D10047137A /* RandomJokeVC.swift in Sources */,
-				C03E5214298C50910048D322 /* JokeVC.swift in Sources */,
+				C03E5214298C50910048D322 /* DetailJokeVC.swift in Sources */,
 				C0036610298A72260038D037 /* AppDelegate.swift in Sources */,
 				C0EC3A47298C227D00DE57CF /* TableViewCell.swift in Sources */,
 				C00F0F8F2993DB3A0025191A /* FavoriteVC.swift in Sources */,
-				C0D032A2298A820500ABA64C /* MenuViewController.swift in Sources */,
+				C0F0E0EF2996BE5500ABBD71 /* WebServiceManager.swift in Sources */,
+				C0F7E4AC299E4F2F009565EE /* UserDefaultManager.swift in Sources */,
+				C0D032A2298A820500ABA64C /* SearchViewController.swift in Sources */,
 				C0E529C52992AA8B0007B888 /* NewTabBarController.swift in Sources */,
 				C0036612298A72260038D037 /* SceneDelegate.swift in Sources */,
-				C0D1C437299443AD00AB693C /* MenuTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

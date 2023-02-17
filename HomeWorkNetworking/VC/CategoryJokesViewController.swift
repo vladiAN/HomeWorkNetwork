@@ -12,7 +12,6 @@ import UIKit
 class CategoryJokesViewController: UIViewController {
     
     private var categories = [String]()
-    private var jokeCategories: String?
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -21,40 +20,31 @@ class CategoryJokesViewController: UIViewController {
         super.viewDidLoad()
         
         
-        fetchData()
+        fetchCategories()
     }
     
     
-    func fetchData() {
+    func fetchCategories() {
         
-        guard let url = URL(string: "https://api.chucknorris.io/jokes/categories") else { return }
-        
-        let session = URLSession.shared
-        session.dataTask(with: url) { (data, response, error) in
-            guard
-               let _ = response,
-                let data = data
-            else { return }
-            
-            do {
-                self.categories = try JSONSerialization.jsonObject(with: data, options: []) as! [String]
+        Webservice().getCategories { [weak self] result in
+            switch result {
+            case .success(let categories):
+                self?.categories = categories
+                self?.categories.append("random")
                 DispatchQueue.main.async {
-                    self.tableView.reloadData()
+                    self?.tableView.reloadData()
                 }
-                //print(self.categories)
-            } catch {
-                print(error)
+            case .failure(let error):
+                debugPrint("Error \(error.localizedDescription)")
             }
-        }.resume()
+        }
+
     }
-    
-   
     
     private func configureCell(cell: TableViewCell, for indexPath: IndexPath) {
         
         let category = categories[indexPath.row]
         cell.categoryLabel.text = category
-        print(category)
     }
     
 }
@@ -85,9 +75,11 @@ extension CategoryJokesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let category = categories[indexPath.row]
         
-        jokeCategories = category
+        DetailJokeVC.shared.category = category
         
-        JokeVC.shared.category = category
+        let story = UIStoryboard(name: "Main", bundle: nil)
+        let vc = story.instantiateViewController(withIdentifier: "DetailJokeVC") as! DetailJokeVC
+        vc.generateNewJokeButtonIsHidden = false
     }
 }
 
